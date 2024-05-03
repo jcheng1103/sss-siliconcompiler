@@ -42,8 +42,6 @@ To include another chip object to compare to:
                        'metavar': '<[manifest name, manifest path>',
                        'sc_print': False},
         "--configuration": {'type': str,
-                            'nargs': '+',
-                            'action': 'append',
                             'help': 'path to chip configuration file (json)',
                             'metavar': '<path to JSON>',
                             'sc_print': False}
@@ -92,7 +90,7 @@ To include another chip object to compare to:
 
     if (switches["configuration"] is not None):
         chip._dashboard(wait=True, port=switches['port'], graph_chips=graph_chips,
-                        dashboard_configuration=switches["configuration"][0][0])
+                        dashboard_configuration=switches["configuration"])
     else:
         chip._dashboard(wait=True, port=switches['port'], graph_chips=graph_chips)
 
