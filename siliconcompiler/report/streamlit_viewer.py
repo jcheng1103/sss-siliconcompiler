@@ -460,7 +460,7 @@ def metrics_dataframe_module(metric_dataframe, metric_to_metric_unit_map):
             nodes = streamlit.multiselect('Pick nodes to include',
                                           node_list, default=selected_nodes)
             options['nodes'] = nodes
-            
+
             if "metrics_list" not in streamlit.session_state and \
                     dashboard_configuration is not None:
                 streamlit.session_state["metrics_list"] = \
